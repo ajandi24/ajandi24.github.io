@@ -5,3 +5,5 @@
 ## "Computers are good at following instructions, but not at reading your mind." - Donald Knuth
 
 ## "When you look into infinity, you realize that there are more important things than what people do all day." — Calvin (Calvin and Hobbes)
+
+[References](references.html)
