@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>New User</title>
+</head>
+
+<body>
+    <form>
+        <label for="firstName">First Name:</label>
+        <br/>
+        <input id="firstName" name="firstName" placeholder="Enter first name here:" pattern="[A-Z,a-z,\s]{1,32}" required/>
+        <br/>
+
+        <label for="lastName">Last Name:</label>
+        <br/>
+        <input id="lastName" name="lastName" placeholder="Enter last name here:" pattern="[A-Z,a-z,\s]{1,32}" required/>
+        <br/>
+
+        <label for="password">Password:</label>
+        <br/>
+        <input id="password" name="password" type="password" placeholder="Enter password here:" required/>
+        <br/>
+
+        <label for="email">Email:</label>
+        <br/>
+        <input id="email" name="email" type="email" placeholder="Enter email here:" required/>
+        <br/>
+
+        <label for="telephoneNumber">Telephone Number:</label>
+        <br/>
+        <input id="telephoneNumber" name="telephoneNumber" type="tel" placeholder="Enter telephone number here:" pattern="[0-9]{3}-[0-9]{4}" />
+        <br/>
+
+        <label for="homepageURL">Homepage URL:</label>
+        <br/>
+        <input id="homepageURL" name="homepageURL" type="url" placeholder="Enter homepage URL here:"/>
+        <br/>
+
+        <label for="birthMonth">Birth Month:</label>
+        <br/>
+        <input id="birthMonth" name="birthMonth" type="motnth" placeholder="Enter birth month here:"/>
+        <br/>
+
+        <label for="birthYear">Birth Year:</label>
+        <br/>
+        <input id="birthYear" name="birthYear" type="number" placeholder="Enter birth year here:"/>
+        <br/>
+
+        <input type="checkbox" id="canEmail" name="canEmail" value="true"/>
+        <label id="canEmail">I would like to sign up for daily spam emails!</label>
+
+        <fieldset>
+            <legend>I would like to sign up for text notifications. (At the expense of your data plan!)</legend>
+
+            <input type="radio" id="yes" name="textNotifications" value="yes">
+            <label for="yes">Yes!</label>
+            <br/>
+
+            <input type="radio" id="no" name="textNotifications" value="no">
+            <label for="no">No</label>
+
+        </fieldset>
+
+        <fieldset>
+            
+            <legend>Do you love our product?</legend>
+
+            <input type="radio" id="1" name="rating" value="1">
+            <label for="1">I do not like it.</label>
+            <br/>
+
+            <input type="radio" id="2" name="rating" value="2">
+            <label for="2">It could be better.</label>
+            <br/>
+
+            <input type="radio" id="3" name="rating" value="3">
+            <label for="3">It is decent.</label>
+            <br/>
+
+            <input type="radio" id="4" name="rating" value="4">
+            <label for="4">I like it!</label>
+            <br/>
+
+            <input type="radio" id="5" name="rating" value="5">
+            <label for="5">I love it!</label>
+
+        </fieldset>
+
+        <input type="reset"/>
+
+        <input type="submit"/>
+
+
+    </form>
+
+    <br/>
+    <a href="references.html">Take me back!</a>
+</body>
+
+</html>
