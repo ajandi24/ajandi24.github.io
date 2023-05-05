@@ -1,9 +1,12 @@
 "use strict";
 
 const entries = [];
-const checkBoxes = [];
+var numEntries = 0;
 
-
+window.onload = function()
+{
+    document.getElementById("numTasks").innerHTML = 0;
+}
 
 function btnAdd(event)
 {
@@ -12,28 +15,11 @@ function btnAdd(event)
     entries.push(number);
 
 
-    /*
-    document.getElementById("todoList").innerHTML +=
-    "<li id=\"".concat(number, "\">", number, "</li>");
-
-    // Each checkBox has the id of "checkBox " + number.
-    document.getElementById("checkBox").innerHTML += 
-    "<input type=\"checkbox\" id=\"checkBox ".concat(number, "\"></input><br\/>");
-    */
-
-    /*
-    document.getElementById("table").innerHTML +=
-    "<tr>" + 
-    "<td id=\"element ".concat(number, "\">", number, "</td>") +
-    "<td><input type=\"checkbox\" id=\"checkBox ".concat(number, "\"></input></td>") + 
-    "</tr>";
-    */
-
     document.getElementById("entireTodoList").innerHTML +=
     "<tr id=\"row " + number + "\">" + 
     
     // Number
-    "<td>" + number + ".</td>" + 
+    //"<td>" + number + ".</td>" + 
 
     // Text Boxes
 
@@ -43,6 +29,10 @@ function btnAdd(event)
     "<td><input id=\"checkBox " + number + "\" type=\"checkbox\"/></td>" +
 
     "</tr>";
+
+    // Updates the Number of tasks
+    numEntries++;
+    updateInformation();
 }
 
 function btnRemove(event)
@@ -63,7 +53,14 @@ function btnRemove(event)
             if(isChecked)
             {
                 document.getElementById("row " + i).remove();
+                numEntries--;
             }
         }
     }
+    updateInformation();
+}
+
+function updateInformation()
+{
+    document.getElementById("numTasks").innerHTML = numEntries;
 }
